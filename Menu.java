@@ -38,8 +38,7 @@ public class Menu {
 			if (op>=i){
 				System.out.println("Opcao errada!");
 				op=0;
-			}
-
+			}else if(op == 4) break;
 		}
 		return op;
 	}
