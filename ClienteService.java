@@ -50,4 +50,8 @@ public class ClienteService {
         System.out.println("Valor inválido.");
     }
     }
+
+    public void consultarSaldo(Cliente cliente) {
+        System.out.printf("Saldo atual: R$ %.2f%n", cliente.getSaldo());
+    }
 }
