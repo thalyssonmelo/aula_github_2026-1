@@ -36,4 +36,18 @@ public class ClienteService {
             System.out.println("Saque recusado. Verifique valor e saldo.");
         }
     }
+
+    public void realizarDeposito(Cliente cliente) {
+    System.out.print("Valor do depósito: ");
+    double valor = Double.parseDouble(scanner.nextLine());
+
+    boolean ok = cliente.depositar(valor);
+
+    if (ok) {
+        System.out.println("Depósito realizado. Saldo atual: R$" +
+                String.format("%.2f", cliente.getSaldo()));
+    } else {
+        System.out.println("Valor inválido.");
+    }
+    }
 }
