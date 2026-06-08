@@ -12,6 +12,26 @@ public class Cliente {
         this.saldo = saldo;
     }
 
+    public boolean sacar(double valor) {
+        if (valor <= 0) return false;
+        if (valor > saldo) return false;
+        saldo -= valor;
+        return true;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public boolean depositar(double valor) {
+    if (valor <= 0) {
+        return false;
+    }
+
+    saldo += valor;
+    return true;
+    }
+
     @Override
     public String toString() {
         return String.format("Nome: %s | CPF: %s | Email: %s | Saldo: R$%.2f",
