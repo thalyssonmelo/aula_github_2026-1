@@ -23,6 +23,15 @@ public class Cliente {
         return saldo;
     }
 
+    public boolean depositar(double valor) {
+    if (valor <= 0) {
+        return false;
+    }
+
+    saldo += valor;
+    return true;
+    }
+
     @Override
     public String toString() {
         return String.format("Nome: %s | CPF: %s | Email: %s | Saldo: R$%.2f",
